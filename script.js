@@ -2,7 +2,7 @@
 var factNum=5;// the starting number to be multiplied by; the 'answer'
   // 
   // the order in which the facts will be presented. 0, 1 and ten are "rule based" and should be done before we do this.
-var factSequence=[10, 2,5,4,9,3,6,7,8];
+var factSequence=[ 2,5,4,9,3,6,7,8];
 // the initial setting - arrays begin with "0"
 var factIndex=0;
 // sets the factSet to the right number.   It will change as we go. 
@@ -66,7 +66,6 @@ else
     }
 // here's where we create the number chart and then shade in the multiples of the fact. 
 createMultImage();
-changeMultiples('section > div','palevioletred','yellow');
 }
 
 // // build a number chart from 1 to the answer, including the numbers. 
@@ -88,7 +87,9 @@ function createMultImage()
 
   for (let num=1; num<=factNum; num++)
   {multPicHTML +='<img src= images/2socksIcon.png  tableValue="1" alt="1 pair of 2 socks" style="max-width:100%;max-height:100%;">'
-  
+    // now make it the HTML
+   multPic.innerHTML=multPicHTML;
+}
   }
 function checkName(picNum)
 {
