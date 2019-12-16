@@ -68,6 +68,7 @@ else
 createMultImage();
 }
 
+// multPicHTML +='<img src= images/2socksIcon.png   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;">';
 // // build a number chart from 1 to the answer, including the numbers. 
 // function createMultImage()
 // {
@@ -80,13 +81,15 @@ createMultImage();
 //   }
 //   // now make it the HTML
 //    multPic.innerHTML=multPicHTML;
+
 // }
 function createMultImage()
 {
   let multPicHTML="";
 
   for (let num=1; num<=factNum; num++)
-  {multPicHTML +='<img src= images/2socksIcon.png  tableValue="1" alt="1 pair of 2 socks" style="max-width:100%;max-height:100%;">'
+ 
+  {multPicHTML +='<div> <img src= images/2socksIcon.png   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;"> </div>';
     // now make it the HTML
    multPic.innerHTML=multPicHTML;
 }

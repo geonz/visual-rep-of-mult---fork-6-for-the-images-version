@@ -38,21 +38,28 @@ body {
 { 
   /* this is where the images will be.  In othe rbranches it will be number chart*/ 
   text-align:center;
-  background-color:palevioletred;  grid-column-start: 2;
+  /* background-color:palevioletred;  */grid-column-start: 2;  
   grid-column-end: 4;
   
       
       
       min-width: 100px;
-      
-
 }
+      section > div
+{
+  background-color: powderblue;
+}
+ img
+ {
+   max-width: 100%;
+   height: auto;
+ }
 .centerMult 
 { 
   min-width: 200px;
  display: grid;
-     grid-template-columns: repeat(10, minmax(10px, 1fr));
-     /* grid-template-rows: repeat(10, minmax(10px, 1fr)); */
+     grid-template-columns: repeat(5, minmax(10px, 1fr));
+      grid-template-rows: repeat(2, minmax(10px, 1fr)); 
 }
 .directions 
 {
@@ -105,3 +112,4 @@ body {
 {
   display: none;
 }
+ 
