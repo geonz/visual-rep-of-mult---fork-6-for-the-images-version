@@ -8,8 +8,21 @@ var factIndex=0;
 // sets the factSet to the right number.   It will change as we go. 
 var factSet=factSequence[factIndex];
 
+var imgsrc = ""; 
 
+function pickImage(factSet)
+{
+  switch(factSet)
+  {
+    case 2:
+     {imgsrc='<img src= images/2socksIcon.png   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;">';}
 
+  }
+  case 3:
+  {
+    imgsrc='<img src= images/3purpleCubes2.png   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;">';
+  }
+}
 // this changes the times tables fact set to the next in the sequence
 function nextFact()
 {
@@ -89,7 +102,7 @@ function createMultImage()
 
   for (let num=1; num<=factNum; num++)
  
-  {multPicHTML +='<div> <img src= images/2socksIcon.png   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;"> </div>';
+  {multPicHTML +='<div> <img src= images/3purpleCubes2.svg   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;"> </div>';
     // now make it the HTML
    multPic.innerHTML=multPicHTML;
 }
