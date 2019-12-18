@@ -2,7 +2,7 @@
 var factNum=5;// the starting number to be multiplied by; the 'answer'
   // 
   // the order in which the facts will be presented. 0, 1 and ten are "rule based" and should be done before we do this.
-var factSequence=[ 2,5,4,9,3,6,7,8];
+var factSequence=[ 2,10, 5,4,9,3,6,7,8];
 // the initial setting - arrays begin with "0"
 var factIndex=0;
 // sets the factSet to the right number.   It will change as we go. 
@@ -89,18 +89,47 @@ function pickImage(factSet)
   switch(factSet)
   {
     case 2:
-     {imgsrc='<img src= images/2socksIcon.png   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;">';
+     {imgsrc='<img src= images/icon2.png   alt="2 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
      break;}
 
   
   case 3:
   {
-    imgsrc='<img src= images/3purpleCubes2.svg   alt="group of 3 purple cubes" style="min-height:50px;max-width:100%;max-height:100%;">';
+    imgsrc='<img src= images/icon3.png   alt="3 red dots domino" style="min-height:50px;max-width:100%;max-height:100%;">';
+    break;
+  }
+  case 4:
+  {
+    imgsrc='<img src= images/icon4.png   alt="4 red dots domino" style="min-height:50px;max-width:100%;max-height:100%;">';
+    break;
+  }
+  case 5:
+  {
+    imgsrc='<img src= images/icon5.png   alt="5 red dots domino" style="min-height:50px;max-width:100%;max-height:100%;">';
+    break;
+  }
+  case 6:
+  {
+    imgsrc='<img src= images/icon6.png   alt="6 red dots" style="min-height:50px;max-width:100%;max-height:100%;">';
+    break;
+  }
+  case 7:
+  {
+    imgsrc='<img src= images/icon7.png   alt="7 red dots" style="min-height:50px;max-width:100%;max-height:100%;">';
+    break;
+  }
+  case 8:
+  {
+    imgsrc='<img src= images/icon8.png   alt="8 red dots" style="min-height:50px;max-width:100%;max-height:100%;">';
+    break;
+  }case 9:
+  {
+    imgsrc='<img src= images/icon9.png   alt="9 red dots domino" style="min-height:50px;max-width:100%;max-height:100%;">';
     break;
   }
   case 10:
   {
-    imgsrc='<img src= images/twoHands.svg  alt="2 hands with 5 fingers each" style="min-height:50px;max-width:100%;max-height:100%;">';
+    imgsrc='<img src= images/icon10.png alt="10 red dots" style="min-height:50px;max-width:100%;max-height:100%;">';
     break;
   }
 }
@@ -108,7 +137,7 @@ function pickImage(factSet)
 function createMultImage()
 {
   let multPicHTML="";
-pickImage(factSet); 
+pickImage(10); 
   for (let num=1; num<=factNum; num++)
  
   {multPicHTML +='<div>'+ imgsrc + '</div>';
@@ -146,7 +175,7 @@ function checkAnswer()
   {
     feedback.innerHTML="That's right! Try the next one! ";
     // need a "next fact" or 
-    factNum+=1;
+    factNum+=9;
 newFact();
     // go to the next one.   
   }
