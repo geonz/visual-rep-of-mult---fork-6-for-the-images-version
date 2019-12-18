@@ -15,13 +15,21 @@ function pickImage(factSet)
   switch(factSet)
   {
     case 2:
-     {imgsrc='<img src= images/2socksIcon.png   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;">';}
+     {imgsrc='<img src= images/2socksIcon.png   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;">';
+     break;}
 
-  }
+  
   case 3:
   {
-    imgsrc='<img src= images/3purpleCubes2.png   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;">';
+    imgsrc='<img src= images/3purpleCubes2.svg   alt="group of 3 purple cubes" style="min-height:50px;max-width:100%;max-height:100%;">';
+    break;
   }
+  case 10:
+  {
+    imgsrc='<img src= images/twoHands.svg  alt="2 hands with 5 fingers each" style="min-height:50px;max-width:100%;max-height:100%;">';
+    break;
+  }
+}
 }
 // this changes the times tables fact set to the next in the sequence
 function nextFact()
