@@ -2,7 +2,7 @@
 var factNum=5;// the starting number to be multiplied by; the 'answer'
   // 
   // the order in which the facts will be presented. 0, 1 and ten are "rule based" and should be done before we do this.
-var factSequence=[ 2,10, 5,4,9,3,6,7,8];
+var factSequence=[ 10, 2, 5,4,9,3,6,7,8];
 // the initial setting - arrays begin with "0"
 var factIndex=0;
 // sets the factSet to the right number.   It will change as we go. 
@@ -73,15 +73,7 @@ createMultImage();
 // // build a number chart from 1 to the answer, including the numbers. 
 // function createMultImage()
 // {
-//   // make the string of text and variables that you want to be displayed
-//   let multPicHTML="";
-//   let numMax = factSet*10;
-//   for (let num=1; num<=numMax; num++)
-//   { 
-//    multPicHTML +='  <div class = "item" id="d'+num + '" >' + num + ' </div>'; 
-//   }
-//   // now make it the HTML
-//    multPic.innerHTML=multPicHTML;
+
 
 // }
 function pickImage(factSet)
@@ -98,38 +90,15 @@ function pickImage(factSet)
     imgsrc='<img src= images/icon3.png   alt="3 red dots domino" style="min-height:50px;max-width:100%;max-height:100%;">';
     break;
   }
+
   case 4:
-  {
-    imgsrc='<img src= images/icon4.png   alt="4 red dots domino" style="min-height:50px;max-width:100%;max-height:100%;">';
-    break;
-  }
-  case 5:
-  {
-    imgsrc='<img src= images/icon5.png   alt="5 red dots domino" style="min-height:50px;max-width:100%;max-height:100%;">';
-    break;
-  }
-  case 6:
-  {
-    imgsrc='<img src= images/icon6.png   alt="6 red dots" style="min-height:50px;max-width:100%;max-height:100%;">';
-    break;
-  }
-  case 7:
-  {
-    imgsrc='<img src= images/icon7.png   alt="7 red dots" style="min-height:50px;max-width:100%;max-height:100%;">';
-    break;
-  }
-  case 8:
-  {
-    imgsrc='<img src= images/icon8.png   alt="8 red dots" style="min-height:50px;max-width:100%;max-height:100%;">';
-    break;
-  }case 9:
-  {
-    imgsrc='<img src= images/icon9.png   alt="9 red dots domino" style="min-height:50px;max-width:100%;max-height:100%;">';
-    break;
-  }
+     {imgsrc='<img src= images/icon4.png   alt="4 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
+     break;}
+
+     
   case 10:
   {
-    imgsrc='<img src= images/icon10.png alt="10 red dots" style="min-height:50px;max-width:100%;max-height:100%;">';
+    imgsrc='<img src= images/icon10.png alt="10 dots like a domino" style="min-height:50px;  max-width:100%;max-height:100%; ">';
     break;
   }
 }
@@ -137,7 +106,7 @@ function pickImage(factSet)
 function createMultImage()
 {
   let multPicHTML="";
-pickImage(10); 
+pickImage(5); 
   for (let num=1; num<=factNum; num++)
  
   {multPicHTML +='<div>'+ imgsrc + '</div>';
