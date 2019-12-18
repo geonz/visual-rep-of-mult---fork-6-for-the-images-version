@@ -8,29 +8,9 @@ var factIndex=0;
 // sets the factSet to the right number.   It will change as we go. 
 var factSet=factSequence[factIndex];
 
-var imgsrc = ""; 
+var imgsrc = "oops"; 
 
-function pickImage(factSet)
-{
-  switch(factSet)
-  {
-    case 2:
-     {imgsrc='<img src= images/2socksIcon.png   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;">';
-     break;}
 
-  
-  case 3:
-  {
-    imgsrc='<img src= images/3purpleCubes2.svg   alt="group of 3 purple cubes" style="min-height:50px;max-width:100%;max-height:100%;">';
-    break;
-  }
-  case 10:
-  {
-    imgsrc='<img src= images/twoHands.svg  alt="2 hands with 5 fingers each" style="min-height:50px;max-width:100%;max-height:100%;">';
-    break;
-  }
-}
-}
 // this changes the times tables fact set to the next in the sequence
 function nextFact()
 {
@@ -104,13 +84,34 @@ createMultImage();
 //    multPic.innerHTML=multPicHTML;
 
 // }
+function pickImage(factSet)
+{
+  switch(factSet)
+  {
+    case 2:
+     {imgsrc='<img src= images/2socksIcon.png   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;">';
+     break;}
+
+  
+  case 3:
+  {
+    imgsrc='<img src= images/3purpleCubes2.svg   alt="group of 3 purple cubes" style="min-height:50px;max-width:100%;max-height:100%;">';
+    break;
+  }
+  case 10:
+  {
+    imgsrc='<img src= images/twoHands.svg  alt="2 hands with 5 fingers each" style="min-height:50px;max-width:100%;max-height:100%;">';
+    break;
+  }
+}
+}
 function createMultImage()
 {
   let multPicHTML="";
-
+pickImage(factSet); 
   for (let num=1; num<=factNum; num++)
  
-  {multPicHTML +='<div> <img src= images/3purpleCubes2.svg   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;"> </div>';
+  {multPicHTML +='<div>'+ imgsrc + '</div>';
     // now make it the HTML
    multPic.innerHTML=multPicHTML;
 }
