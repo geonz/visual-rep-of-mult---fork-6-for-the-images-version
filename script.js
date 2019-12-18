@@ -81,7 +81,7 @@ function pickImage(factSet)
   switch(factSet)
   {
     case 2:
-     {imgsrc='<img src= images/icon2.png   alt="2 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
+     {imgsrc='<img src= images/icon2.png   alt="2 red dots domino " style="min-height:50px;  max-width:100%;max-height:100%;">';
      break;}
 
   
@@ -109,9 +109,11 @@ function pickImage(factSet)
      case 8:
      {imgsrc='<img src= images/icon8.png   alt="8 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
      break;}
-     case 9:
-     {imgsrc='<img src= images/icon9.png   alt="9 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
-     break;}
+
+    //  case 9:
+    //  {imgsrc='<img src= images/icon9.png   alt="9 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
+    //  break;}
+
   case 10:
   {
     imgsrc='<img src= images/icon10.png alt="10 dots like a domino" style="min-height:50px;  max-width:100%;max-height:100%; ">';
