@@ -95,7 +95,12 @@ function pickImage(factSet)
      {imgsrc='<img src= images/icon4.png   alt="4 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
      break;}
 
-     
+     case 5:
+     {imgsrc='<img src= images/icon5.png   alt="5 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
+     break;}
+     case 6:
+     {imgsrc='<img src= images/icon6.png   alt="6 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
+     break;}
   case 10:
   {
     imgsrc='<img src= images/icon10.png alt="10 dots like a domino" style="min-height:50px;  max-width:100%;max-height:100%; ">';
@@ -106,7 +111,7 @@ function pickImage(factSet)
 function createMultImage()
 {
   let multPicHTML="";
-pickImage(5); 
+pickImage(6); 
   for (let num=1; num<=factNum; num++)
  
   {multPicHTML +='<div>'+ imgsrc + '</div>';
