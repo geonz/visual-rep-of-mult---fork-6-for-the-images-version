@@ -142,16 +142,16 @@ if (b==="")
 else if (b==factNum)
   {
     feedback.innerHTML="Awesome!  That's the right second factor!"
-    document.getElementById("A1").style.display = 'block';
-    document.getElementById("check2").style.display = 'inline';
-    check1.disabled=true;
-    check2.disabled=false;
-    check2.style.color="white";
+    // document.getElementById("A1").style.display = 'block';
+    // document.getElementById("check2").style.display = 'inline';
+    checkAnswer();
+    
   }
 else
     {
       feedback.innerHTML="Check your entry; it doesn't seem to be right. I'm just a computer, though..."
     }
+  
 }
 
 
@@ -160,7 +160,7 @@ function checkAnswer()
     var c = multAnswer1.value; 
   if (c == factNum*factSet)
   {
-    feedback.innerHTML="That's right! Try the next one! ";
+    feedback.innerHTML="That's right! ";
     // need a "next fact" or 
     factNum+=9;
 newFact();
