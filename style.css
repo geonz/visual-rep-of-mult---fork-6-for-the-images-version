@@ -92,7 +92,7 @@ body {
       grid-column-end:4;
      /* border: 2px solid #4CA450; */
     }
-    #factor, #multAnswer
+    #factor, #multAnswer, #multAnswer1
     /* // these are the inputs   */
     {
       text-align: right;

@@ -58,11 +58,11 @@ else
   {
         // p1.innerHTML="fact number  is: " + factNum;  
         // now type the question in for this fact, with the input box.
-      factor2.innerHTML= factSet + " x " + '<input type="number" id="factor" size="1" maxlength="2"/>';
+      factor2.innerHTML= factSet + " x " + '<input type="number" id="factor" size="1" maxlength="2"/>' + " = " + '<input type="number" id="multAnswer1" size = "1" maxlength="3"/> ';
       // take away the second part if it was there from earlier question, but put in the right text for later.  
       A1.style.display="none";
       check2.style.display="none";
-      A1.innerHTML=  factSet + " x " + factNum + " =" + ' <input type="number" id="multAnswer"  size="1" maxlength="2"/>';
+      A1.innerHTML=  factSet + " x " + factNum + " =" + ' <input type="number" id="multAnswer"  size="1" maxlength="3"/>';
     check1.disabled=false;
     }
 // here's where we create the number chart and then shade in the multiples of the fact. 
