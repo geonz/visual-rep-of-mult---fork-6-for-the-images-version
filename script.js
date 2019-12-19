@@ -157,7 +157,7 @@ else
 
 function checkAnswer()
 {
-    var c = multAnswer.value; 
+    var c = multAnswer1.value; 
   if (c == factNum*factSet)
   {
     feedback.innerHTML="That's right! Try the next one! ";
