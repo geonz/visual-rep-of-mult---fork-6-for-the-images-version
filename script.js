@@ -25,7 +25,7 @@ function setToHigh5()
    all10.disabled=true;
    startUp();
 }
-function setToFirstFive()
+function setToFirst5()
 {  minFact = 1;
    maxFact=5;
    first5.disabled=true;
@@ -53,10 +53,7 @@ function nextFact()
 // this displays the first fact in whatever set you are on; so if you want to start the fact you're on over, it will do that. Also works at beginning. 
 function startUp()
 {
-  // we'll hide the second part of the question at first. 
- 
-
-  // start with our number x 1. 
+   // start with our number x 1 or 6. 
   factNum=minFact;
     // reset the buttons 
     check1.disabled=false;
@@ -188,16 +185,16 @@ function checkAnswer()
 else 
   if (c == factNum*factSet)
   {
-          if (factNum>=10)
-          {
-            "That's right! You're done with this set of facts. "
+          // if (factNum>=10)
+          // {
+          //   "That's right! You're done with this set of facts. "
           
-          }
+          // }
   // else    
   //  // need a "next fact" or 
   //   {
-  //     factNum+=9;
-  //   feedback.innerHTML="That's right - try the next one!  factnum is now " + factNum;}
+       factNum+=9;
+    feedback.innerHTML="That's right - try the next one!  factnum is now " + factNum;
 newFact();
     // go to the next one.   
   }
