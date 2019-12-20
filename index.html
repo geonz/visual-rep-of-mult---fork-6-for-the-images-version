@@ -13,15 +13,23 @@
 
 
       <!-- 3 divs for 3 buttons.  No CSS assigned to them.  -->
-    <div id="startButton">
+    <!-- <div id="startButton">
           <button id="start"  class="button1" onclick="startUp();">Start</button> 
+    </div> -->
+    
+    <div>
+            <button id="first5"  class="button1"  onclick="setToFirst5()";">Facts 1-5</button>
     </div>
     <div>
+            <button id="sixThru10"  class="button1"  onclick="setToHigh5();">Facts 6-10 </button>
+    </div><div>
+            <button id="all10"  class="button1"   onclick="setToAll10();">Facts 1-10</button>
+    </div>
+<div>
           <button id="startFact"  class="button1" disabled="true" onclick="startUp();">Start fact over</button> </div>
     <div>
             <button id="reset"  class="button1" disabled="true" onclick="startOver();">Start All over</button>
     </div>
-
 <!-- This is where the visual representation goes.  It can take various forms. Javascript will populate it. -->
     <section id="multPic" class="centerMult"  >
     </section>

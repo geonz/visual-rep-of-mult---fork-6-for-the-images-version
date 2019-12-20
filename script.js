@@ -1,5 +1,9 @@
  
-var factNum=5;// the starting number to be multiplied by; the 'answer'
+var maxFact = 10; 
+var minFact = 1; 
+// the number you want to practice to... 
+
+var factNum;;// the starting number to be multiplied by; the 'answer'
   // 
   // the order in which the facts will be presented. 0, 1 and ten are "rule based" and should be done before we do this.
 var factSequence=[ 10, 2, 5,4,9,3,6,7,8];
@@ -8,10 +12,36 @@ var factIndex=0;
 // sets the factSet to the right number.   It will change as we go. 
 var factSet=factSequence[factIndex];
 
-var imgsrc = "oops"; 
+var imgsrc = "image should be here"; 
 
 
 // this changes the times tables fact set to the next in the sequence
+
+function setToHigh5()
+{  minFact = 6;
+   maxFact=10;
+   first5.disabled=true;
+   sixThru10.disabled=true;
+   all10.disabled=true;
+   startUp();
+}
+function setToFirstFive()
+{  minFact = 1;
+   maxFact=5;
+   first5.disabled=true;
+   sixThru10.disabled=true;
+   all10.disabled=true;
+   startUp();
+}
+function setToAllTen()
+{  minFact = 1;
+   maxFact=10;
+   first5.disabled=true;
+   sixThru10.disabled=true;
+   all10.disabled=true;
+   startUp();
+}
+
 function nextFact()
 {
     factIndex++;  
@@ -24,14 +54,12 @@ function nextFact()
 function startUp()
 {
   // we'll hide the second part of the question at first. 
-  A1.style.display="none";
-  check2.style.display="none";
+ 
 
   // start with our number x 1. 
-  factNum=1;
-  // reset the buttons 
+  factNum=minFact;
+    // reset the buttons 
     check1.disabled=false;
-  start.disabled=true;
   reset.disabled=false;
   startFact.disabled=false;
   // present the problem and call up its picture. 
@@ -49,7 +77,7 @@ function startOver()
 function newFact()
 // first make sure we're only going to ten. 
 {
-  if (factNum>10)
+  if (factNum>maxFact)
   {
   p1.innerHTML= "you're done!" +'<button id="check1" class="button1" onclick="nextFact();">Next Fact</button>';
   } 
@@ -59,23 +87,13 @@ else
         // p1.innerHTML="fact number  is: " + factNum;  
         // now type the question in for this fact, with the input box.
       factor2.innerHTML= factSet + " x " + '<input type="number" id="factor" size="1" maxlength="2"/>' + " = " + '<input type="number" id="multAnswer1" size = "1" maxlength="3"/> ';
-      // take away the second part if it was there from earlier question, but put in the right text for later.  
-      A1.style.display="none";
-      check2.style.display="none";
-      A1.innerHTML=  factSet + " x " + factNum + " =" + ' <input type="number" id="multAnswer"  size="1" maxlength="3"/>';
-    check1.disabled=false;
+     
     }
 // here's where we create the number chart and then shade in the multiples of the fact. 
 createMultImage();
 }
 
-// multPicHTML +='<img src= images/2socksIcon.png   alt="1 pair of 2 socks" style="min-height:50px;max-width:100%;max-height:100%;">';
-// // build a number chart from 1 to the answer, including the numbers. 
-// function createMultImage()
-// {
 
-
-// }
 function pickImage(factSet)
 {
   switch(factSet)
@@ -121,17 +139,22 @@ function pickImage(factSet)
   }
 }
 }
+
+
 function createMultImage()
 {
   let multPicHTML="";
 pickImage(factSet); 
-  for (let num=1; num<=factNum; num++)
+if (factNum <=maxFact)
+
+  {for (let num=1; num<=factNum; num++)
  
-  {multPicHTML +='<div>'+ imgsrc + '</div>';
-    // now make it the HTML
-   multPic.innerHTML=multPicHTML;
-}
+    {multPicHTML +='<div>'+ imgsrc + '</div>';
+      // now make it the HTML
+    multPic.innerHTML=multPicHTML;
+    }
   }
+}
 function checkName(picNum)
 {
 var b = factor.value;
@@ -141,7 +164,7 @@ if (b==="")
   }
 else if (b==factNum)
   {
-    feedback.innerHTML="Awesome!  That's the right second factor!"
+    
     // document.getElementById("A1").style.display = 'block';
     // document.getElementById("check2").style.display = 'inline';
     checkAnswer();
@@ -158,11 +181,23 @@ else
 function checkAnswer()
 {
     var c = multAnswer1.value; 
+  if (c==="")
+  {
+    feedback.innerHTML="please enter an answer";
+  }
+else 
   if (c == factNum*factSet)
   {
-    feedback.innerHTML="That's right! ";
-    // need a "next fact" or 
-    factNum+=9;
+          if (factNum>=10)
+          {
+            "That's right! You're done with this set of facts. "
+          
+          }
+  // else    
+  //  // need a "next fact" or 
+  //   {
+  //     factNum+=9;
+  //   feedback.innerHTML="That's right - try the next one!  factnum is now " + factNum;}
 newFact();
     // go to the next one.   
   }
