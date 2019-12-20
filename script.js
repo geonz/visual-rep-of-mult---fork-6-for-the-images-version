@@ -33,7 +33,7 @@ function setToFirst5()
    all10.disabled=true;
    startUp();
 }
-function setToAllTen()
+function setToAll10()
 {  minFact = 1;
    maxFact=10;
    first5.disabled=true;
@@ -66,7 +66,9 @@ function startUp()
 function startOver()
 {
   // make sure we're starting with the twos. 
-  factSet=2;
+  first5.disabled=false;
+  sixThru10.disabled=false;
+  all10.disabled=false;
   startUp();
 }
 
@@ -125,9 +127,9 @@ function pickImage(factSet)
      {imgsrc='<img src= images/icon8.png   alt="8 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
      break;}
 
-    //  case 9:
-    //  {imgsrc='<img src= images/icon9.png   alt="9 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
-    //  break;}
+     case 9:
+     {imgsrc='<img src= images/icon9.png   alt="9 red dots domino " style="min-height:50px;max-width:100%;max-height:100%;">';
+     break;}
 
   case 10:
   {
@@ -193,7 +195,7 @@ else
   // else    
   //  // need a "next fact" or 
   //   {
-       factNum+=9;
+       factNum+=4;
     feedback.innerHTML="That's right - try the next one!  factnum is now " + factNum;
 newFact();
     // go to the next one.   
