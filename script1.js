@@ -54,6 +54,7 @@ function nextFact()
 function startUp()
 {
    // start with our number x 1 or 6. 
+   directions.innerHTML="What multiplication fact is in the picture?";
   factNum=minFact;
     // reset the buttons 
     check1.disabled=false;

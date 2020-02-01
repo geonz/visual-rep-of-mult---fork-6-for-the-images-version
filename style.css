@@ -51,6 +51,12 @@ body {
    border-radius: 12px;
    margin: 2px;
 }
+input
+{
+  font-size: 24px;
+}
+
+
  img
  {
    max-width: 100%;
@@ -63,7 +69,7 @@ body {
      grid-template-columns: repeat(5, minmax(10px, 1fr));
       grid-template-rows: repeat(2, minmax(10px, 1fr)); 
 }
-.directions 
+#directions 
 {
   font-size: 20px;
     grid-column-start:1;
@@ -76,6 +82,8 @@ body {
     border-radius: 12px;
       grid-template-columns: 1fr 1fr 1fr; 
       background-color: powderblue;
+
+      padding: 15px;
       
     
     font-size: 2em;
