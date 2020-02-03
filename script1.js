@@ -196,8 +196,8 @@ else
   // else    
   //  // need a "next fact" or 
   //   {
-       factNum+=4;
-    feedback.innerHTML="That's right - try the next one!  factnum is now " + factNum;
+       factNum+=1;
+    feedback.innerHTML="That's right - Here's the next one! ";
 newFact();
     // go to the next one.   
   }
